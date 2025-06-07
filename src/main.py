@@ -1,5 +1,6 @@
 import os
 import shutil
+import sys
 
 from generate_page import generate_page, generate_pages_recursive
 
@@ -28,8 +29,13 @@ def copy_static(source, destination):
     copy_contents(source, destination)
         
 def main():
-    copy_static("static", "public")
-    generate_pages_recursive("content", "template.html", "public")
+
+    basepath = sys.argv[1] if len (sys.argv) > 1 else "/"
+    print(f"Using basepath: {basepath}")
+
+    copy_static("static", "docs")
+
+    generate_pages_recursive("content", "template.html", "docs", basepath=basepath)
 
 if __name__ == "__main__":
     main()
