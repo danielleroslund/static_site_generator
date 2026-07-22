@@ -27,7 +27,7 @@ Rather than relying on existing frameworks, I wanted to implement the entire gen
 
 Click the image below to view the live demo.
 
-[![Static Site Generator Preview](images/preview.png)](https://danielleroslund.github.io/static_site_generator/)
+[![Static Site Generator Preview](docs/images/preview.png)](https://danielleroslund.github.io/static_site_generator/)
 
 ---
 
